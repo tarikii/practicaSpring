@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" th:href="@{webjars/bootstrap/5.2.3/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/main.css}">
+    <title>Instalacions Esportives</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        th {
+            border: 1px solid black;
+            padding: 5px;
+            background-color: black;
+            color: white;
+        }
+
+        td {
+            border: 1px solid black;
+            padding: 5px;
+            background-color: cyan;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid">
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Anys</th>
+            <th>Camps Poliesportius</th>
+            <th>Espais de Atletisme</th>
+            <th>Piscines al aire lliure</th>
+            <th>Piscines cobertes</th>
+            <th>Pistes Poliesportives</th>
+            <th>Pavellons</th>
+            <th>Pistes de Tennis</th>
+            <th>Pistes de Padel</th>
+            <th>Sales Esportives</th>
+            <th>Pistes de Esquaix</th>
+            <th>Frontons</th>
+            <th>Espais de Petanca</th>
+            <th>Altres Espais Esportius</th>
+            <th>Rees de Activitat Esportiva</th>
+            <th>Total Espais Censats</th>
+            <th>Instal·lacions</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="instalacio : ${instalacionsDades}">
+            <td th:text="${instalacio.anys}"></td>
+            <td th:text="${instalacio.camps_poliesportius}"></td>
+            <td th:text="${instalacio.espais_d_atletisme}"></td>
+            <td th:text="${instalacio.piscines_a_l_aire_lliure}"></td>
+            <td th:text="${instalacio.piscines_cobertes}"></td>
+            <td th:text="${instalacio.pistes_poliesportives}"></td>
+            <td th:text="${instalacio.pavellons}"></td>
+            <td th:text="${instalacio.pistes_de_tennis}"></td>
+            <td th:text="${instalacio.pistes_de_p_del}"></td>
+            <td th:text="${instalacio.sales_esportives}"></td>
+            <td th:text="${instalacio.pistes_d_esquaix}"></td>
+            <td th:text="${instalacio.frontons}"></td>
+            <td th:text="${instalacio.espais_de_petanca}"></td>
+            <td th:text="${instalacio.altres_espais_esportius}"></td>
+            <td th:text="${instalacio.rees_d_activitat_esportiva}"></td>
+            <td th:text="${instalacio.total_espais_censats}"></td>
+            <td th:text="${instalacio.instal_lacions}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

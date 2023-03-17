@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping(InstalacionsController.CIUDADANIA)
+@RequestMapping(InstalacionsController.INSTALACIONS)
 public class InstalacionsController {
 
-    public static final String CIUDADANIA = "/ciudadania";
+    public static final String INSTALACIONS = "/instalacions";
 
 
     @Autowired
